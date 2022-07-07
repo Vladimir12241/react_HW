@@ -1,0 +1,110 @@
+body {
+	background-color: black;
+}
+
+.App {
+	color: #3bdf09;
+	max-width: 100%;
+}
+
+.Header {
+	text-align: center;
+	width: 100%;
+	top: 0;
+	position: fixed;
+	background-color: #000000;
+	z-index: 1;
+}
+
+.Main {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	padding-top: 125px;
+}
+
+.Maine-List {
+	width: 20%;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	text-align: left;
+}
+
+.Episode-List-Item {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	margin-bottom: 25px;
+}
+
+.Episode-List-Item > h2 {
+	margin: 0;
+	padding: 0;
+}
+
+.Characters-List {
+	position: relative;
+	width: 150px;
+}
+
+.Characters {
+	cursor: pointer;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	padding: 2px 0;
+	position: relative;
+}
+
+.Show-Characters {
+	background: none;
+	border: none;
+	font-weight: bold;
+	color: #3bdf09;
+	margin: 10px 0;
+}
+
+.About-Characters {
+	display: flex;
+	position: absolute;
+	align-items: flex-start;
+	left: 120%;
+	top: 0%;
+	width: fit-content;
+	cursor: default;
+}
+
+.Character-Details {
+	margin-left: 20px;
+	flex-shrink: 0;
+}
+
+.Character-Episode-List {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	overflow-y: auto;
+	flex-shrink: 0;
+	height: 300px;
+	max-width: 300px;
+}
+
+.Character-Episodes {
+	flex-direction: column;
+	flex-shrink: 0;
+	display: flex;
+	flex-flow: column;
+}
+
+.Episodes {
+	font-weight: bold;
+	margin-bottom: 25px;
+	position: relative;
+	left: 20%;
+}
+
+.hide {
+	display: none;
+}
