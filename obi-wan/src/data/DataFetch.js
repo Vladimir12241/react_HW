@@ -1,6 +1,7 @@
 import { actionPromise, store } from "./promiseReducer";
 
 export const getFetch = async (name, url) => {
+	// store.dispatch(actionPromise("fullInfo", getAllInfo(url)));
 	try {
 		let result = await fetch(url);
 		if (result.ok) {
@@ -72,3 +73,32 @@ const multiplyActionFetch = async (name, promArr) => {
 	totalResult = await Promise.all(promArr.map(async (url) => await oneFetch(url)));
 	return { [name]: totalResult };
 };
+
+
+
+// const getAllInfo = async (url) => {
+// 	let result;
+// 	await fetch(url)
+// 		.then((res) => res.json())
+// 		.then((data) => {
+// 			const allPromises = [];
+// 			for (let [key, value] of Object.entries(data)) {
+// 				if (typeof value === "string" && value.startsWith("http")) {
+// 					allPromises.push(
+// 						fetch(value)
+// 							.then((res) => res.json())
+// 							.then((res) => (data[key] = res))
+// 					);
+// 				}
+// 				if (Array.isArray(value)) {
+// 					allPromises.push(
+// 						Promise.all(value.map((url) => fetch(url).then((res) => res.json()))).then((res) => (data[key] = res))
+// 					);
+// 				}
+// 			}
+// 			result = data;
+// 			return Promise.all(allPromises);
+// 		})
+// 		.then(() => result);
+// 	return result;
+// };
