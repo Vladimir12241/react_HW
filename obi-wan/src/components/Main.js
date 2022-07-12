@@ -35,6 +35,7 @@ const Main = () => {
 	const [hash, setHash] = useState("#");
 	window.onhashchange = () => {
 		const route = window.location.hash.split("/")[1];
+		if (!route) window.location.hash = "/Obi_Wan";
 		if (route !== hash) setHash(route);
 		if (hash === "Obi_Wan") {
 			getFetch("ServData", ObiWan);
