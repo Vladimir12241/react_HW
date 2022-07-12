@@ -1,0 +1,61 @@
+* {
+	list-style: none;
+}
+
+.App {
+	height: 100vh;
+	background-color: black;
+	color: aliceblue;
+	text-align: center;
+	position: relative;
+}
+
+header {
+	border-bottom: 10px solid #257c10;
+	text-decoration: none;
+}
+
+h1 {
+	font-size: 4em;
+}
+
+.Nav-List {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+.Nav-List-Item {
+	margin: 5px 20px;
+}
+
+.Nav-List_Link {
+	font-size: 1.5em;
+	text-decoration: none;
+	color: #ffffff;
+}
+
+.Nav-List_Link:hover {
+	color: #c10707;
+}
+
+.Main {
+	max-width: 60%;
+	position: relative;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, 0%);
+}
+
+.card {
+	background-color: black;
+}
+
+.pointer:hover {
+	color: #257c10;
+	cursor: pointer;
+}
+
+.border {
+	border: 2px solid whitesmoke;
+}
