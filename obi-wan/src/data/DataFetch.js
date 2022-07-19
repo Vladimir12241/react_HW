@@ -74,6 +74,11 @@ const multiplyActionFetch = async (name, promArr) => {
 	return { [name]: totalResult };
 };
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> d2ee346e997a9153dc7c7b7e4a79ac3ec97b1611
 // const getAllInfo = async (url) => {
 // 	let result;
 // 	await fetch(url)
