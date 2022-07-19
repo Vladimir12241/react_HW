@@ -32,9 +32,10 @@ const DataCeck = ({ data }) => {
 const ConectData = connect((state) => ({ data: state.ServData?.payload }))(DataCeck);
 
 const Main = () => {
-	const [hash, setHash] = useState("#");
+	const [hash, setHash] = useState("#/Obi_Wan");
 	window.onhashchange = () => {
 		const route = window.location.hash.split("/")[1];
+		if (!route) window.location.hash = "/Obi_Wan";
 		if (route !== hash) setHash(route);
 		if (hash === "Obi_Wan") {
 			getFetch("ServData", ObiWan);

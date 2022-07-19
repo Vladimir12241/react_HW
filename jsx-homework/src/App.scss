@@ -1,0 +1,134 @@
+// @mixin rotated-text($num-letters: 12, $angle-span: 360deg, $angle-offset: 0deg) {
+// 	$angle-per-char: $angle-span / $num-letters;
+// 	@for $i from 1 through $num-letters {
+// 	.char#{$i} {transform : rotate($angle-offset + $angle-per-char * $i)
+// 	}
+// 	}
+// 	}
+
+.App {
+	text-align: center;
+	.App-header {
+		background-color: #282c34;
+		min-height: 20vh;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		font-size: calc(10px + 2vmin);
+		color: white;
+	}
+
+	.HW-Box {
+		margin: 10px 25px;
+		.No-Spoiler {
+			margin: 1vh 10vh;
+		}
+
+		.Spoiled {
+			margin: 1vh 10vh;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+
+			h2:hover {
+				width: fit-content;
+
+				&:hover {
+					cursor: pointer;
+					color: coral;
+				}
+			}
+		}
+
+		.Pass-Check {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+
+		.Pass-Check > input {
+			margin: 5px;
+		}
+
+		.Timer {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			margin-bottom: 15px;
+
+			.Timer-Input {
+				display: flex;
+				flex-direction: row;
+				justify-content: center;
+				margin-bottom: 15px;
+
+				div {
+					margin-left: 10px;
+				}
+			}
+
+			.Control-Box {
+				display: flex;
+				flex-direction: row;
+				justify-content: center;
+
+				.Timer-Input-btn {
+					margin-left: 10px;
+					padding: 2px 9px;
+					color: #fff;
+					background: #0d6efd;
+					border-radius: 5px;
+					border: 1px solid #000;
+				}
+			}
+
+			.Timer-Box {
+				display: flex;
+				flex-direction: row;
+				justify-content: center;
+				margin-bottom: 15px;
+
+				.Timer-Count {
+					margin-left: 10px;
+				}
+			}
+
+			.Time-Disc {
+				display: flex;
+				justify-content: center;
+				position: relative;
+				margin-left: auto;
+				margin-right: auto;
+				width: 50%;
+				height: 50%;
+				transform-origin: bottom center;
+				// @include rotated-text;
+
+				@for $i from 1 through 12 {
+					.char#{$i} {
+						transform: rotate(($i * 30) + deg);
+					}
+				}
+
+				span {
+					position: absolute;
+					width: 100%;
+					height: 45%;
+					left: 0;
+					top: 15px;
+					transform-origin: bottom center;
+				}
+
+				img {
+					width: 50%;
+					margin: 10%;
+				}
+
+				.Hand {
+					position: absolute;
+				}
+			}
+		}
+	}
+}
