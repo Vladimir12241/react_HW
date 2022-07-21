@@ -1,0 +1,241 @@
+body {
+	box-sizing: border-box;
+}
+
+.App {
+	overflow: hidden;
+	width: 100%;
+	position: relative;
+	header {
+		display: flex;
+		flex-flow: row wrap;
+		position: relative;
+		background: bisque;
+		justify-content: space-between;
+		align-items: center;
+		padding: 20px 10px;
+		max-height: 15vh;
+
+		.Logo {
+			position: relative;
+			a {
+				img {
+					height: 5vh;
+					width: auto;
+				}
+			}
+		}
+
+		.Navigation {
+			ul {
+				list-style: none;
+				display: flex;
+				flex-flow: row nowrap;
+
+				li {
+					margin-left: 10px;
+				}
+			}
+		}
+
+		.User-Ico {
+			width: auto;
+			svg {
+				height: 4vh;
+				width: auto;
+			}
+		}
+	}
+
+	.All-Content {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: nowrap;
+
+		aside {
+			padding: 10px 12px;
+			position: relative;
+			left: 0;
+			right: 0;
+			flex-basis: 30%;
+
+			h3 {
+				margin: 0;
+			}
+
+			ul {
+				list-style: none;
+				padding-left: 10px;
+				li {
+					padding: 8px 0 3px 0;
+					border-bottom: 2px solid #d96707fa;
+					a {
+						text-decoration: none;
+						color: #000;
+
+						&:hover {
+							cursor: pointer;
+							color: #0086c0;
+						}
+					}
+				}
+			}
+		}
+
+		.Content {
+			flex-basis: 70%;
+			padding: 2px 6px;
+			margin: 5px 15px 25px 5px;
+			border-top: 4px solid #de6927;
+
+			.Login {
+				margin: 25px;
+				position: relative;
+
+				.Login-Form {
+					display: flex;
+					flex-direction: column;
+					flex-wrap: nowrap;
+					align-items: center;
+
+					.Pass-Notes {
+						display: none;
+						padding: 5px;
+						margin-top: 7px;
+						max-width: 250px;
+						background: blanchedalmond;
+						box-shadow: 3px -3px 3px #906d47, -3px -3px 3px #906d47, -3px 3px 3px #906d47, 3px 3px 3px #906d47;
+					}
+
+					.User-Pass:focus {
+						& ~ .Pass-Notes {
+							display: block;
+						}
+					}
+
+					.Login-btn {
+						background: #0754ac;
+						color: #ffe4c7;
+						border: 2px solid #054084;
+						border-radius: 7px;
+						padding: 2px 13px;
+
+						&:hover {
+							cursor: pointer;
+							color: #eadada;
+							background: #078827;
+							border: 2px solid #065018;
+							padding: 2px 13px;
+							border-radius: 7px;
+						}
+					}
+				}
+			}
+
+			// .SignUp {
+
+			// }
+
+			.Curent-Category {
+				.Category-Goods {
+					display: flex;
+					flex-direction: row;
+					flex-wrap: wrap;
+					align-items: stretch;
+
+					.Good-Carts {
+						margin: 20px;
+						flex: 1 0 25%;
+
+						box-shadow: 1px 1px 1px #856c6c, 2px 2px 3px #c80f0f, 0px 0px 6px #856c6c;
+						padding-bottom: 10px;
+						display: flex;
+						flex-direction: column;
+						justify-content: space-between;
+						flex-wrap: nowrap;
+						text-align: center;
+
+						.Good-Link {
+							color: #000;
+							text-decoration: none;
+							&:hover {
+								.Good-Name {
+									color: #0754ac;
+								}
+							}
+							.Img-Box {
+								position: relative;
+
+								.Good-Img {
+									width: 70%;
+									margin: 10px 5px 5px 5px;
+									padding: 0;
+								}
+							}
+
+							.Good-Name {
+								margin: auto 7px 10px;
+								color: #000;
+							}
+						}
+					}
+				}
+			}
+
+			.Curent-Good {
+				padding: 10px 7px;
+				position: relative;
+				display: flex;
+				align-items: center;
+
+				.Img-Box {
+					.Good-Img {
+						width: 100%;
+					}
+				}
+
+				.Buy {
+					position: absolute;
+					left: 50%;
+					right: 0%;
+					top: 3%;
+					display: flex;
+					flex-direction: row;
+					flex-wrap: nowrap;
+					align-items: center;
+
+					.Buy-btn {
+						font-size: 1.6em;
+						background: #0754ac;
+						color: #ffe4c7;
+						border: 2px solid #054084;
+						border-radius: 7px;
+						padding: 2px 13px;
+
+						&:hover {
+							cursor: pointer;
+							font-size: 1.6em;
+							color: #eadada;
+							background: #078827;
+							border: 2px solid #065018;
+							border-radius: 7px;
+							padding: 2px 13px;
+						}
+					}
+					.Price {
+						color: firebrick;
+						font-size: 1.8rem;
+						margin-right: 15px;
+					}
+				}
+
+				section {
+					padding-left: 7px;
+					min-height: 100%;
+					margin: 50px 25px;
+					width: 50%;
+				}
+			}
+		}
+	}
+}
